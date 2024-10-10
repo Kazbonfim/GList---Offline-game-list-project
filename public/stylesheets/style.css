@@ -1,8 +1,40 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../images/background1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  /* filter: blur(5px);  */
 }
 
-a {
-  color: #00B7FF;
+.container {
+  backdrop-filter: blur(5px); /* Aplica desfoque ao fundo do container */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Adiciona um fundo branco semi-transparente */
+  border-radius: 5px; /* Opcional: adiciona bordas arredondadas */
+  padding: 20px; /* Opcional: adiciona preenchimento interno */
 }
+
+.card-container {
+  height: 23em;
+  padding: 2em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* Animações */
+.card {
+  transition: transform 0.3s ease; /* Suaviza a transição */
+  transform: scale(1); /* Tamanho original */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Animação de hover */
+.card:hover {
+  transform: scale(1.05); /* Aumenta o card em 10% */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8); /* Sombra mais intensa */
+}
+

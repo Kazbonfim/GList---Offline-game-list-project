@@ -1,0 +1,94 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário com Bootstrap</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="overflow-y: hidden;">
+    <div class="container mt-5">
+      <div style="margin-bottom: 1em; text-align: center;">
+        <h2>Adicione jogos em sua biblioteca 📝</h2>
+        <p>Seja bem-vindo! Insira os dados corretamente; em breve teremos opções
+          interessantes para facilitar o preenchimento dos dados, e mais
+          informações úteis para ajudar na filtragem</p>
+      </div>
+      <form action="/games/insertgame" method="post">
+        <div class="form-group">
+          <label for="console">Console 🕹️<span
+              style="color: red;"
+            >*</span></label>
+          <select class="form-control" id="console" name="console" required>
+            <option value="" disabled selected>Selecione o console</option>
+            <option value="PS4">PlayStation 4</option>
+            <option value="PS5">PlayStation 5</option>
+            <option value="Xbox One">Xbox One</option>
+            <option value="Xbox Series X">Xbox Series X</option>
+            <option value="Nintendo Switch">Nintendo Switch</option>
+            <option value="PC">PC</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="titulo">Título do Jogo<span
+              style="color: red;"
+            >*</span></label>
+          <input
+            type="text"
+            class="form-control"
+            id="titulo"
+            placeholder="Digite o título do jogo"
+            name="titulo"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="genero">Gênero do Jogo<span
+              style="color: red;"
+            >*</span></label>
+          <select class="form-control" id="genero" name="genero" required>
+            <option value="" disabled selected>
+              Selecione o gênero do jogo
+            </option>
+            <option value="Ação">Ação</option>
+            <option value="Aventura">Aventura</option>
+            <option value="RPG">RPG</option>
+            <option value="Estratégia">Estratégia</option>
+            <option value="Esporte">Esporte</option>
+            <option value="Simulação">Simulação</option>
+            <option value="Plataforma">Plataforma</option>
+            <option value="Corrida">Corrida</option>
+          </select>
+        </div>
+        <hr />
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <a href="/games/listall"><button
+            type="button"
+            class="btn btn-primary"
+          >Meus Jogos</button></a>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3 mt-5">
+      <p>&copy; 2024 YourGlist. Desenvolvido por <a href="https://github.com/Kazbonfim">@Kazbonfim</a></p>
+      <p>HTML, CSS, Nodejs, Express, Hbs & Bootstrap 💛🚀</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      defer
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      defer
+    ></script>
+  </body>
+</html>

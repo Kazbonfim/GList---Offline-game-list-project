@@ -1,0 +1,70 @@
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Jogos</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div style="margin-bottom: 1em; text-align: center;">
+        <h2>Sua biblioteca 🎮</h2>
+        <p>Veja, e gerencie sua lista de jogos aqui</p>
+      </div>
+      <hr />
+      <div class="card-container">
+        <div class="row">
+          {{#each games}}
+            <!-- Loop pelos jogos recebidos -->
+            <div class="col-md-4">
+              <!-- Tamanho do card -->
+              <div
+                class="card"
+                style="background-color: {{getRandomColors
+                  this.title.length
+                }}; box-shadow: -9px 8px 25px 2px rgba(0,0,0,0.2); margin: 5px;"
+              >
+                <div class="card-body" style="color: white;">
+                  <h5
+                    class="card-title"
+                    style="text-shadow: -1px 4px 6px rgba(0,0,0,0.5);"
+                  >{{this.title}}</h5>
+                  <hr style="background-color: rgba(255, 255, 255, 0.5);" />
+                  <!-- Acesso ao título do jogo -->
+                  <h6
+                    class="card-subtitle mb-2 text-light"
+                  >{{this.console}}</h6>
+                  <!-- Acesso ao console do jogo -->
+                  <p class="card-text">Gênero: {{this.genre}}</p>
+                  <!-- Acesso ao gênero do jogo -->
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+      <hr />
+      <a href="/" class="btn btn-primary">Voltar ao Início</a>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      defer
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      defer
+    ></script>
+  </body>
+
+</html>
