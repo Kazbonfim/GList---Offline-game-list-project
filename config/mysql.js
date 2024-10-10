@@ -1,4 +1,4 @@
-const mysql = require('mysql'); // Iniciando conexão com Mysql
+const mysql = require('mysql2'); // Iniciando conexão com Mysql
 const dotenv = require('dotenv'); // Validando dados de entrada a partir de um arquivo .env
 
 dotenv.config(); // Carregando variáveis de ambiente
@@ -17,3 +17,5 @@ conn.connect((error) => {
     }
     console.log('Banco de dados conectado', conn.host); // Conectando em caso de sucesso
 })
+
+module.exports = conn; // Exportando a conexão

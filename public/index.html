@@ -1,13 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário com Bootstrap</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2>Formulário de Cadastro de Jogos (𝔅𝔢𝔱𝔞)</h2>
+      <form action="/games/insertgame" method="post">
+        <div class="form-group">
+          <label for="titulo">Título do Jogo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="titulo"
+            placeholder="Digite o título do jogo"
+            name = "titulo"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="console">Console</label>
+          <select class="form-control" id="console" name="console" required>
+            <option value="" disabled selected>Selecione o console</option>
+            <option value="ps4">PlayStation 4</option>
+            <option value="ps5">PlayStation 5</option>
+            <option value="xbox_one">Xbox One</option>
+            <option value="xbox_series_x">Xbox Series X</option>
+            <option value="switch">Nintendo Switch</option>
+            <option value="pc">PC</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="genero">Gênero do Jogo</label>
+          <select class="form-control" id="genero" name="genero" required>
+            <option value="" disabled selected>
+              Selecione o gênero do jogo
+            </option>
+            <option value="acao">Ação</option>
+            <option value="aventura">Aventura</option>
+            <option value="rpg">RPG</option>
+            <option value="estrategia">Estratégia</option>
+            <option value="esporte">Esporte</option>
+            <option value="simulacao">Simulação</option>
+            <option value="plataforma">Plataforma</option>
+            <option value="corrida">Corrida</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </form>
+    </div>
 
-<head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-
-<body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      defer
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      defer
+    ></script>
+  </body>
 </html>
