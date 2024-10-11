@@ -3,19 +3,30 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: auto;
-  /* filter: blur(5px);  */
+}
+
+.card-container::-webkit-scrollbar {
+  width: 0.5em; /* Largura da scrollbar */
+}
+
+.card-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Cor do fundo da scrollbar */
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.8); /* Cor da parte que desliza */
+}
+
+.card-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(106, 90, 205, 1); /* Cor ao passar o mouse */
 }
 
 .container {
-  backdrop-filter: blur(5px); /* Aplica desfoque ao fundo do container */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Adiciona um fundo branco semi-transparente */
-  border-radius: 5px; /* Opcional: adiciona bordas arredondadas */
-  padding: 20px; /* Opcional: adiciona preenchimento interno */
+  color: white;
+  backdrop-filter: blur(5px); 
+  background-color: rgba(45, 50, 59, 0.5);
+  border-radius: 5px;
+  padding: 20px; 
 }
 
 .card-container {
@@ -26,6 +37,7 @@ body {
 }
 
 .trash {
+  opacity: 0.8;
   text-decoration: none;
   display: inline-block;
   margin-left: 90%;
@@ -35,20 +47,46 @@ body {
 }
 
 .trash:hover {
+  opacity: 1;
   text-decoration: none;
   transform: rotate(-25deg);
 }
 
-/* Animações */
+.trash:focus {
+  /* Bug corrigido: a borda não aparece mais, após clicar no ícone de lixeira */
+    outline: none; 
+    box-shadow: none; 
+}
+
 .card {
-  transition: transform 0.3s ease; /* Suaviza a transição */
-  transform: scale(1); /* Tamanho original */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Animação de hover */
 .card:hover {
-  transform: scale(1.05); /* Aumenta o card em 10% */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8); /* Sombra mais intensa */
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 1);
 }
 
+.card-body {
+  width: auto;
+  height: 230px;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}

@@ -1,14 +1,13 @@
-.caret {
-    display: inline-block;
-    width: 16px;  /* Ajuste para um tamanho menor */
-    height: 16px; /* Ajuste para um tamanho menor */
-    margin-left: 5px; /* Espaço entre o texto e o ícone */
-    animation: blink 1s step-end infinite; /* Animação de piscar */
+.nav-item {
+  opacity: 0.5;
 }
 
-/* Define a animação de piscar */
-@keyframes blink {
-    50% {
-        opacity: 0; /* Fica invisível na metade do ciclo */
-    }
+.nav-item:hover {
+  animation: lightup 1s normal;
+}
+
+@keyframes lightup {
+  50% {
+    opacity: 1;
+  }
 }

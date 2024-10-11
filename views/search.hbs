@@ -16,7 +16,7 @@
 
     <div class="container mt-4">
       <div style="margin-bottom: 1em; text-align: center;">
-        <h2>Buscar Jogos na Biblioteca 🔍</h2>
+        <h2>Buscar Jogos em sua Biblioteca 🔍</h2>
         <p>
           Encontre os jogos cadastrados. Insira o nome do jogo corretamente para
           obter resultados precisos.
@@ -45,7 +45,7 @@
           <ul class="list-group">
             {{#each jogos}}
               <li class="list-group-item bg-secondary text-white">
-                {{this.title}} - Console {{this.console}}
+                {{this.title}} - Console: {{this.console}}
               </li>
             {{/each}}
           </ul>
