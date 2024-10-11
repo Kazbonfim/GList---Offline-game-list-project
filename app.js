@@ -4,11 +4,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const helmet = require('helmet');
 const hbs = require('hbs');
+
 // Helpers
 const { getRandomColors } = require('./helpers/getRandomColors');
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -29,6 +30,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet()); // Para dar proteção contra ataques
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 module.exports = app;

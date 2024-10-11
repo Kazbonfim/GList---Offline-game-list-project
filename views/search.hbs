@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar Jogos</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="overflow-y: hidden;">
+
+    {{>navbar}} <!-- Chamada de navbar em /views/partials, cuidado ao modificar -->
+
+    <div class="container mt-4">
+      <div style="margin-bottom: 1em; text-align: center;">
+        <h2>Buscar Jogos na Biblioteca 🔍</h2>
+        <p>
+          Encontre os jogos cadastrados. Insira o nome do jogo corretamente para
+          obter resultados precisos.
+        </p>
+      </div>
+
+      <!-- Formulário de busca -->
+      <form id="searchForm" action="/games/search" method="get">
+        <div class="form-group">
+          <label for="searchInput">Nome do Jogo:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="searchInput"
+            name="busca"
+            placeholder="Digite o nome do jogo"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+
+      <!-- Resultados da busca -->
+      <div id="results" class="mt-5">
+        {{#if jogos.length}}
+          <ul class="list-group">
+            {{#each jogos}}
+              <li class="list-group-item bg-secondary text-white">
+                {{this.title}} - Console {{this.console}}
+              </li>
+            {{/each}}
+          </ul>
+        {{else}}
+          <hr>
+          <p class="text-center">Nenhum jogo encontrado.</p>
+        {{/if}}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3 mt-

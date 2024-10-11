@@ -10,14 +10,17 @@
     />
   </head>
   <body style="overflow-y: hidden;">
-    <div class="container mt-5">
+
+    {{>navbar}} <!-- Chamada de navbar em /views/partials, cuidado ao modificar -->
+
+    <div class="container mt-4">
       <div style="margin-bottom: 1em; text-align: center;">
         <h2>Adicione jogos em sua biblioteca 📝</h2>
         <p>Seja bem-vindo! Insira os dados corretamente; em breve teremos opções
           interessantes para facilitar o preenchimento dos dados, e mais
           informações úteis para ajudar na filtragem</p>
       </div>
-      <form action="/games/insertgame" method="post">
+      <form action="/games/insertgames" method="post">
         <div class="form-group">
           <label for="console">Console 🕹️<span
               style="color: red;"
@@ -65,7 +68,7 @@
         </div>
         <hr />
         <button type="submit" class="btn btn-primary">Cadastrar</button>
-        <a href="/games/listall"><button
+        <a href="/games/listgames"><button
             type="button"
             class="btn btn-primary"
           >Meus Jogos</button></a>

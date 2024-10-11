@@ -36,7 +36,6 @@ body {
 
 .trash:hover {
   text-decoration: none;
-  transform: scale(1.5);
   transform: rotate(-25deg);
 }
 
