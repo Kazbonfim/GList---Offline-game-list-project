@@ -1,17 +1,18 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 const helmet = require("helmet");
 const hbs = require("hbs");
+const gameList = require("./routes/gameList");
 
 // Helpers
 const { getRandomColors } = require("./helpers/getRandomColors");
 hbs.registerPartials(path.join(__dirname, "views/partials"));
 
-var indexRouter = require("./routes/index");
+const indexRouter = require("./routes/index");
 
-var app = express();
+const app = express();
 
 // Configura o diretório de views
 app.set("views", path.join(__dirname, "views"));
@@ -28,11 +29,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(helmet()); // Para dar proteção contra ataques
 
+
 app.use((req, res, next) => {
     res.setHeader("Content-Security-Policy", "script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net https://stackpath.bootstrapcdn.com");
     next();
 });
 
+// Rotas
 app.use("/", indexRouter);
+app.use("/rawg", gameList);
 
 module.exports = app;

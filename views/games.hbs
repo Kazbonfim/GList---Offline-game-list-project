@@ -30,7 +30,11 @@
               <div class="card-body" style="color: white">
                 <h5 class="card-title" style="text-shadow: -1px 4px 6px rgba(0, 0, 0, 0.5)">
                   {{this.title}}
-                  <div>
+                </h5>
+                <hr style="background-color: rgba(255, 255, 255, 0.8)" />
+                <h6 class="card-subtitle mb-2 text-light">{{this.console}}</h6>
+                <p class="card-text">Gênero: {{this.genre}}</p>
+                 <div><!-- Ícone de deleção -->
                     <form class="remove-game-form" method="post">
                       <input type="hidden" name="gameId" value="{{this.id}}">
                       <button
@@ -43,10 +47,6 @@
                       </button>
                     </form>
                   </div>
-                </h5>
-                <hr style="background-color: rgba(255, 255, 255, 0.8)" />
-                <h6 class="card-subtitle mb-2 text-light">{{this.console}}</h6>
-                <p class="card-text">Gênero: {{this.genre}}</p>
               </div>
             </div>
           </div>
