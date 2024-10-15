@@ -2,6 +2,8 @@
 
 O Glist é um aplicativo web desenvolvido para cadastro e gerenciamento de jogos. Com uma interface intuitiva, o Glist permite que os usuários adicionem, visualizem e organizem suas coleções de jogos de forma simples e eficiente.
 
+![image](https://github.com/user-attachments/assets/1a29af79-a016-4500-9b01-cd13c4f64d32)
+
 ------------
 
 ## Tecnologias Utilizadas
@@ -10,6 +12,7 @@ O Glist é um aplicativo web desenvolvido para cadastro e gerenciamento de jogos
 - Handlebars: Motor de templates para gerar HTML dinâmico.
 - MySQL: Sistema de gerenciamento de banco de dados relacional para armazenar informações dos jogos.
 
+![image](https://github.com/user-attachments/assets/fdf3758b-aa20-45e0-97ed-448a663120d3)
 ------------
 ## Quais os próximos passos no projeto?
 
