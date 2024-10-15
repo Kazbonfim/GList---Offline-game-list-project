@@ -7,7 +7,7 @@ const hbs = require("hbs");
 const gameList = require("./routes/gameList");
 
 // Helpers
-const { getRandomColors } = require("./helpers/getRandomColors");
+const { getConsoleColors } = require("./helpers/getConsoleColors.js");
 hbs.registerPartials(path.join(__dirname, "views/partials"));
 
 const indexRouter = require("./routes/index");
@@ -20,7 +20,7 @@ app.use("/helpers", express.static(path.join(__dirname, "helpers")));
 app.set("view engine", "hbs");
 
 // Registrando Helpers
-hbs.registerHelper("getRandomColors", getRandomColors);
+hbs.registerHelper("getConsoleColors", getConsoleColors);
 
 app.use(logger("dev"));
 app.use(express.json());

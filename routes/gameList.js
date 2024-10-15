@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-const { getGameList } = require("../public/data/GameList");
+const { getGameList } = require("../public/api/GameList");
 
 // Definindo a rota para obter a lista de jogos
 router.get("/games/rawg", async function (req, res) {

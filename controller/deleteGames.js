@@ -5,6 +5,7 @@ function deleteGames(req, res, next) {
     console.log(req.body);
     
     const gameId = req.body.gameId; 
+    console.log(gameId)
 
     const query = `DELETE FROM meus_jogos WHERE id = ?`;
 

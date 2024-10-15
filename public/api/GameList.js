@@ -14,7 +14,8 @@ async function fetchGameList() {
         const response = await axios.get(`https://api.rawg.io/api/platforms?key=${apikey}`);
         // Recebendo, e armazenando...
         gameList.push(...response.data.results);
-        console.log(gameList);
+        // Debug🛑
+        // console.log(gameList);
         console.log('Lista de jogos recebida com sucesso!');
     } catch (error) {
         console.error('Erro ao capturar a lista de jogos:', error.response ? error.response.data : error.message);

@@ -27,4 +27,6 @@ router.get("/games/search", searchGames);
 
 router.post("/games/deletegames", deleteGames);
 
+router.post("/games/deletegames/:id", deleteGames);
+
 module.exports = router;
