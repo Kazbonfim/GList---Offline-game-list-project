@@ -82,10 +82,10 @@ body {
 
 .card-title {
   padding: 0;
-  white-space: nowrap;         /* Não permite quebra de linha */
-  overflow: hidden;           /* Esconde o conteúdo que ultrapassa o contêiner */
-  text-overflow: ellipsis;    /* Adiciona "..." no final */
-  width: 80vw;   /* Define uma largura fixa */
+  white-space: nowrap; /* Não permite quebra de linha */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o contêiner */
+  text-overflow: ellipsis; /* Adiciona "..." no final */
+  width: 80vw; /* Define uma largura fixa */
   max-width: 18.75rem;
 }
 
@@ -103,6 +103,24 @@ body {
     opacity: 0;
     transform: translateY(-20px);
   }
+}
+
+#suggestions {
+  position: absolute; /* Para posicionar corretamente as sugestões */
+  width: auto;
+  max-height: 200px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.suggestion-item {
+  color: grey;
+  border-bottom: 1px solid #ccc; /* Borda para separar as sugestões */
+  background-color: white; /* Fundo branco */
+  transition: background-color 0.5s; /* Transição suave para a cor de fundo */
+}
+.suggestion-item:hover {
+  background-color: #d9dee4; /* Destaque ao passar o mouse */
+  cursor: pointer; /* Adiciona um cursor pointer */
 }
 
 /* Comentado - Botão de deletar estilizado */

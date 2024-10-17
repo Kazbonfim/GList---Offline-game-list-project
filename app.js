@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const helmet = require("helmet");
 const hbs = require("hbs");
-const gameList = require("./routes/gameList");
+const gameList = require("./routes/rawgApi");
 
 // Helpers
 const { getConsoleColors } = require("./helpers/getConsoleColors.js");
@@ -29,7 +29,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(helmet()); // Para dar proteção contra ataques
 
-
 app.use((req, res, next) => {
     res.setHeader("Content-Security-Policy", "script-src 'self' https://code.jquery.com https://cdn.jsdelivr.net https://stackpath.bootstrapcdn.com");
     next();
@@ -37,6 +36,6 @@ app.use((req, res, next) => {
 
 // Rotas
 app.use("/", indexRouter);
-app.use("/rawg", gameList);
+app.use("/api", gameList);
 
 module.exports = app;

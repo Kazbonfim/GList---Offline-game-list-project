@@ -9,22 +9,28 @@
       rel="stylesheet"
     />
   </head>
-  <body style="overflow-y: hidden;">
+  <body style="overflow-y: hidden">
+      {{>navbar}}
+    <!-- Chamada de navbar em /views/partials, cuidado ao modificar -->
 
-    {{>navbar}} <!-- Chamada de navbar em /views/partials, cuidado ao modificar -->
-
+    <!-- Início: Seção principal do formulário -->
     <div class="container mt-4">
-      <div style="margin-bottom: 1em; text-align: center;">
+      <div style="margin-bottom: 1em; text-align: center">
         <h2>Adicione jogos em sua biblioteca 📝</h2>
-        <p>Seja bem-vindo! Insira os dados corretamente; em breve teremos opções
-          interessantes para facilitar o preenchimento dos dados, e mais
-          informações úteis para ajudar na filtragem</p>
+        <div class="alert alert-success" role="alert">
+          Novas funcionalidades em breve! Aproveite e deixe seu feedback em nosso 
+          <a href="https://github.com/Kazbonfim/GList---Offline-game-list-project/issues">Github!</a>  
+        </div>
       </div>
+      
+      <!-- Início: Formulário para adicionar jogos -->
       <form action="/games/insertgames" method="post">
+        
+        <!-- Início: Seleção de console -->
         <div class="form-group">
-          <label for="console">Console 🕹️<span
-              style="color: red;"
-            >*</span></label>
+          <label for="console"
+            >Console 🕹️<span style="color: red">*</span></label
+          >
           <select class="form-control" id="console" name="console" required>
             <option value="" disabled selected>Selecione o console</option>
             <option value="PS4">PlayStation 4</option>
@@ -35,23 +41,30 @@
             <option value="PC">PC</option>
           </select>
         </div>
+        <!-- Fim: Seleção de console -->
+        
+        <!-- Início: Campo para inserir o título do jogo -->
         <div class="form-group">
-          <label for="titulo">Título do Jogo<span
-              style="color: red;"
-            >*</span></label>
+          <label for="titulo"
+            >Título do Jogo<span style="color: red">*</span></label
+          >
           <input
             type="text"
             class="form-control"
             id="titulo"
-            placeholder="Digite o título do jogo"
             name="titulo"
+            placeholder="Digite o nome do jogo"
             required
           />
+          <div id="suggestions"></div>
         </div>
+        <!-- Fim: Campo para inserir o título do jogo -->
+        
+        <!-- Início: Seleção do gênero do jogo -->
         <div class="form-group">
-          <label for="genero">Gênero do Jogo<span
-              style="color: red;"
-            >*</span></label>
+          <label for="genero"
+            >Gênero do Jogo<span style="color: red">*</span></label
+          >
           <select class="form-control" id="genero" name="genero" required>
             <option value="" disabled selected>
               Selecione o gênero do jogo
@@ -66,21 +79,29 @@
             <option value="Corrida">Corrida</option>
           </select>
         </div>
+        <!-- Fim: Seleção do gênero do jogo -->
+        
         <hr />
         <button type="submit" class="btn btn-primary">Cadastrar</button>
-        <a href="/games/listgames"><button
-            type="button"
-            class="btn btn-primary"
-          >Meus Jogos</button></a>
+        <a href="/games/listgames"
+          ><button type="button" class="btn btn-primary">Meus Jogos</button></a
+        >
       </form>
+      <!-- Fim: Formulário para adicionar jogos -->
     </div>
+    <!-- Fim: Seção principal do formulário -->
 
-    <!-- Footer -->
+    <!-- Início: Footer -->
     <footer class="text-white text-center py-3 mt-4">
-      <p>&copy; 2024 YourGlist. Desenvolvido por <a href="https://github.com/Kazbonfim">@Kazbonfim</a></p>
+      <p>
+        &copy; 2024 YourGlist. Desenvolvido por
+        <a href="https://github.com/Kazbonfim">@Kazbonfim</a>
+      </p>
       <p>HTML, CSS, Nodejs, Express, Hbs & Bootstrap 💛🚀</p>
     </footer>
+    <!-- Fim: Footer -->
 
+    <script src="/javascripts/suggestionGame.js" defer></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       defer
