@@ -1,75 +1,83 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de Jogos</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
 
-  <body>
+<body>
+
     {{>navbar}}
-    <!-- Navbar parcial em /views/partials/navbar.hbs -->
 
     <div class="container mt-4">
-      <!-- Título e descrição da página -->
-      <div style="margin-bottom: 1em; text-align: center">
-        <h2>Sua biblioteca 🎮</h2>
-        <p>Veja, e gerencie sua lista de jogos aqui</p>
-      </div>
-      
-      <hr />
-
-      <!-- Lista de jogos -->
-      <div class="card-container">
-        <div class="row">
-          {{#each games}}
-          <div class="col-md-6" id="game-card-body">
-            <!-- Cartão de jogo -->
-            <div class="card mb-3" style="max-width: 540px; box-shadow: -9px 8px 25px 2px rgba(0,0,0,0.2); border: none; border-radius: 0px;">
-              <div class="row no-gutters">
-                <!-- Imagem do Jogo -->
-                <div class="col-md-4">
-                  <img src="/images/placeholder.png" class="card-img" alt="{{this.title}}" /> 
-                  <!-- <img src="{{this.image}}" class="card-img" alt="{{this.title}}" /> -->
-                </div>
-                
-                <!-- Conteúdo do Jogo -->
-                <div class="col-md-8">
-                  <div class="card-body" style="color: white; background-color: {{getConsoleColors this.console}}">
-                    <h5 class="card-title" style="text-shadow: -1px 4px 6px rgba(0, 0, 0, 0.5)">
-                      {{this.title}}
-                    </h5>
-                    <hr style="background-color: rgba(255, 255, 255, 0.8)" />
-                    <h6 class="card-subtitle mb-2 text-light">{{this.console}}</h6>
-                    <p class="card-text">Gênero: {{this.genre}}</p>
-                    
-                    <!-- Botão de exclusão do jogo -->
-                    <form class="remove-game-form" action="/games/deletegames/{{this.id}}" method="post">
-                      <button class="btn btn-danger btn-sm border" type="submit">Delete</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {{/each}}
+        <!-- Título e descrição da página -->
+        <div class="text-center mb-4">
+            <h2>Sua biblioteca 🎮</h2>
+            <p>Veja, e gerencie sua lista de jogos aqui</p>
         </div>
-      </div>
 
-      <hr />
+        <hr />
 
-      <!-- Botão para voltar ao início -->
-      <a href="/" class="btn btn-primary">Voltar ao Início</a>
+        <!-- Lista de jogos -->
+        <div class="card-container">
+            <div class="row">
+                {{#each games}}
+                <div class="col-md-6 mb-3" id="game-card-body">
+                    <!-- Cartão de jogo -->
+                    <div class="card"
+                        style="max-width: 540px; box-shadow: -9px 8px 25px 2px rgba(0,0,0,0.2); border: none; border-radius: 0;">
+                        <div class="row no-gutters">
+                            <!-- Imagem do Jogo -->
+                            <div class="col-md-4">
+                                <img src="/images/placeholder.png" class="card-img" alt="{{this.title}}"
+                                    id="image-{{this.id}}" />
+                            </div>
+
+                            <!-- Conteúdo do Jogo -->
+                            <div class="col-md-8">
+                                <div class="card-body"
+                                    style="color: white; background-color: {{getConsoleColors this.console}}">
+                                    <h5 class="card-title game-title"
+                                        style="text-shadow: -1px 4px 6px rgba(0, 0, 0, 0.5)">
+                                        {{this.title}}
+                                    </h5>
+                                    <hr style="background-color: rgba(255, 255, 255, 0.8)" />
+                                    <h6 class="card-subtitle mb-2 text-light">{{this.console}}</h6>
+                                    <p class="card-text">Gênero: {{this.genre}}</p>
+
+                                    <!-- Botão de exclusão do jogo -->
+                                    <form class="remove-game-form" action="/games/deletegames/{{this.id}}"
+                                        method="post">
+                                        <button class="btn btn-danger btn-sm border" type="submit">Excluir</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <hr />
+
+    <!-- Botão para voltar ao início -->
+    <a href="/" class="btn btn-primary">Voltar ao Início</a>
     </div>
 
     <!-- Scripts -->
+    <script src="/javascripts/fetchGamesFront.js" defer></script>
     <script src="/javascripts/deleteGameAnimation.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
-  </body>
+
+</body>
+
 </html>

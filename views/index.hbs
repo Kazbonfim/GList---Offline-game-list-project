@@ -1,118 +1,95 @@
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulário com Bootstrap</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body style="overflow-y: hidden">
-      {{>navbar}}
-    <!-- Chamada de navbar em /views/partials, cuidado ao modificar -->
 
-    <!-- Início: Seção principal do formulário -->
-    <div class="container mt-4">
-      <div style="margin-bottom: 1em; text-align: center">
-        <h2>Adicione jogos em sua biblioteca 📝</h2>
-        <div class="alert alert-success" role="alert">
-          Novas funcionalidades em breve! Aproveite e deixe seu feedback em nosso 
-          <a href="https://github.com/Kazbonfim/GList---Offline-game-list-project/issues">Github!</a>  
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário com Bootstrap</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body style="overflow-y: hidden">
+
+  {{>navbar}}
+
+  <!-- Início: Seção principal do formulário -->
+  <div class="container mt-4">
+    <div style="margin-bottom: 1em; text-align: center">
+      <h2>Adicione jogos em sua biblioteca 📝</h2>
+      <div class="alert alert-success" role="alert">
+        Novas funcionalidades em breve! Aproveite e deixe seu feedback em nosso
+        <a href="https://github.com/Kazbonfim/GList---Offline-game-list-project/issues">Github!</a>
       </div>
-      
-      <!-- Início: Formulário para adicionar jogos -->
-      <form action="/games/insertgames" method="post">
-        
-        <!-- Início: Seleção de console -->
-        <div class="form-group">
-          <label for="console"
-            >Console 🕹️<span style="color: red">*</span></label
-          >
-          <select class="form-control" id="console" name="console" required>
-            <option value="" disabled selected>Selecione o console</option>
-            <option value="PS4">PlayStation 4</option>
-            <option value="PS5">PlayStation 5</option>
-            <option value="Xbox One">Xbox One</option>
-            <option value="Xbox Series X">Xbox Series X</option>
-            <option value="Nintendo Switch">Nintendo Switch</option>
-            <option value="PC">PC</option>
-          </select>
-        </div>
-        <!-- Fim: Seleção de console -->
-        
-        <!-- Início: Campo para inserir o título do jogo -->
-        <div class="form-group">
-          <label for="titulo"
-            >Título do Jogo<span style="color: red">*</span></label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="titulo"
-            name="titulo"
-            placeholder="Digite o nome do jogo"
-            required
-          />
-          <div id="suggestions"></div>
-        </div>
-        <!-- Fim: Campo para inserir o título do jogo -->
-        
-        <!-- Início: Seleção do gênero do jogo -->
-        <div class="form-group">
-          <label for="genero"
-            >Gênero do Jogo<span style="color: red">*</span></label
-          >
-          <select class="form-control" id="genero" name="genero" required>
-            <option value="" disabled selected>
-              Selecione o gênero do jogo
-            </option>
-            <option value="Ação">Ação</option>
-            <option value="Aventura">Aventura</option>
-            <option value="RPG">RPG</option>
-            <option value="Estratégia">Estratégia</option>
-            <option value="Esporte">Esporte</option>
-            <option value="Simulação">Simulação</option>
-            <option value="Plataforma">Plataforma</option>
-            <option value="Corrida">Corrida</option>
-          </select>
-        </div>
-        <!-- Fim: Seleção do gênero do jogo -->
-        
-        <hr />
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-        <a href="/games/listgames"
-          ><button type="button" class="btn btn-primary">Meus Jogos</button></a
-        >
-      </form>
-      <!-- Fim: Formulário para adicionar jogos -->
     </div>
-    <!-- Fim: Seção principal do formulário -->
 
-    <!-- Início: Footer -->
-    <footer class="text-white text-center py-3 mt-4">
-      <p>
-        &copy; 2024 YourGlist. Desenvolvido por
-        <a href="https://github.com/Kazbonfim">@Kazbonfim</a>
-      </p>
-      <p>HTML, CSS, Nodejs, Express, Hbs & Bootstrap 💛🚀</p>
-    </footer>
-    <!-- Fim: Footer -->
+    <!-- Início: Formulário para adicionar jogos -->
+    <form action="/games/insertgames" method="post">
 
-    <script src="/javascripts/suggestionGame.js" defer></script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-      defer
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      defer
-    ></script>
-  </body>
+      <!-- Início: Seleção de console -->
+      <div class="form-group">
+        <label for="console">Console 🕹️<span style="color: red">*</span></label>
+        <select class="form-control" id="console" name="console" required>
+          <option value="" disabled selected>Selecione o console</option>
+          <option value="PS4">PlayStation 4</option>
+          <option value="PS5">PlayStation 5</option>
+          <option value="Xbox One">Xbox One</option>
+          <option value="Xbox Series X">Xbox Series X</option>
+          <option value="Nintendo Switch">Nintendo Switch</option>
+          <option value="PC">PC</option>
+        </select>
+      </div>
+      <!-- Fim: Seleção de console -->
+
+      <!-- Início: Campo para inserir o título do jogo -->
+      <div class="form-group">
+        <label for="titulo">Título do Jogo<span style="color: red">*</span></label>
+        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o nome do jogo"
+          required />
+        <div id="suggestions"></div>
+      </div>
+      <!-- Fim: Campo para inserir o título do jogo -->
+
+      <!-- Início: Seleção do gênero do jogo -->
+      <div class="form-group">
+        <label for="genero">Gênero do Jogo<span style="color: red">*</span></label>
+        <select class="form-control" id="genero" name="genero" required>
+          <option value="" disabled selected>
+            Selecione o gênero do jogo
+          </option>
+          <option value="Ação">Ação</option>
+          <option value="Aventura">Aventura</option>
+          <option value="RPG">RPG</option>
+          <option value="Estratégia">Estratégia</option>
+          <option value="Esporte">Esporte</option>
+          <option value="Simulação">Simulação</option>
+          <option value="Plataforma">Plataforma</option>
+          <option value="Corrida">Corrida</option>
+        </select>
+      </div>
+      <!-- Fim: Seleção do gênero do jogo -->
+
+      <hr />
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+      <a href="/games/listgames"><button type="button" class="btn btn-primary">Meus Jogos</button></a>
+    </form>
+    <!-- Fim: Formulário para adicionar jogos -->
+  </div>
+  <!-- Fim: Seção principal do formulário -->
+
+  <!-- Início: Footer -->
+  <footer class="text-white text-center py-3 mt-4">
+    <p>
+      &copy; 2024 YourGlist. Desenvolvido por
+      <a href="https://github.com/Kazbonfim">@Kazbonfim</a>
+    </p>
+    <p>HTML, CSS, Nodejs, Express, Hbs & Bootstrap 💛🚀</p>
+  </footer>
+  <!-- Fim: Footer -->
+
+  <script src="/javascripts/suggestionGame.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+</body>
+
 </html>

@@ -1,0 +1,58 @@
+body {
+    padding: 0;
+}
+
+/* Estilizando o card */
+.card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra do card */
+    transition: box-shadow 0.3s;
+    /* Efeito suave ao passar o mouse */
+    height: 100%;
+    /* Altura total do card */
+    overflow: hidden;
+    /* Esconde partes da imagem que saem do card */
+    position: relative;
+    /* Permite posicionar elementos filhos */
+}
+
+/* Container para a imagem */
+.image-container {
+    height: 200px;
+    /* Altura fixa do container da imagem */
+    overflow: hidden;
+    /* Para esconder partes que ultrapassam o container */
+    position: relative;
+    /* Para controlar o posicionamento da imagem */
+}
+
+/* Estilizando a imagem */
+.card img {
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura do container */
+    height: 100%;
+    /* Faz a imagem ocupar toda a altura do container */
+    object-fit: cover;
+    /* Mantém a proporção da imagem sem distorcer */
+    transition: transform 0.5s ease;
+    /* Transição suave ao aplicar zoom */
+    transform: scale(1);
+    /* Zoom inicial da imagem */
+    position: absolute;
+    /* Permite que a imagem fique em cima do container */
+    left: 0;
+    /* Posiciona a imagem no canto esquerdo */
+    top: 0;
+    /* Posiciona a imagem no topo */
+}
+
+/* Efeito de zoom quando o mouse está sobre o card */
+.card:hover img {
+    transform: scale(1.2);
+    /* Aplica zoom de 20% na imagem */
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    /* Efeito de sombra ao passar o mouse */
+}

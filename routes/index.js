@@ -7,7 +7,6 @@ const insertGames = require("../controller/insertGames");
 const searchGames = require("../controller/searchGames");
 const deleteGames = require("../controller/deleteGames");
 
-
 // Entrada 1
 router.get("/", function (req, res) {
   res.render("index");

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Jogos</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    /* Adicionando sombra ao card */
+    .card {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      /* Sombra suave */
+      transition: box-shadow 0.3s;
+      /* Transição suave ao passar o mouse */
+    }
+
+    /* Sombra mais intensa ao passar o mouse */
+    .card:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-4">
+    <!-- Título e descrição da página -->
+    <div class="text-center mb-4">
+      <h2>Ambiente de testes (front)</h2>
+      <div class="alert alert-warning" role="alert">
+        Ambiente de testes, não recomendo alterar este documento, ou reutilizar ele no produto final
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Lista de jogos -->
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-6 col-md-4 col-lg-3 mt-2">
+        <div class="card">
+          <div class="card-header text-white bg-dark">Título do Jogo 1</div>
+          <img src="../public/images/placeholder.png" class="card-img-top" alt="Imagem do jogo 1" />
+          <div class="card-body bg-secondary text-white">
+            <h5>Plataforma: <span>PC</span></h5>
+            <h5>Gênero: <span>Ação</span></h5>
+            <div>
+              <!-- Rating -->
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <div class="card-footer bg-dark">
+            <div class="dropdown show">
+              <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gerenciar
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Deletar</a></li>
+                <a class="dropdown-item" href="#"><!-- Favoritar --></a>
+                <a class="dropdown-item" href="#"><!-- Visualizar --></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do Card 1 -->
+
+      <!-- Card 2 -->
+      <div class="col-6 col-md-4 col-lg-3 mt-2">
+        <div class="card">
+          <div class="card-header text-white bg-dark">Título do Jogo 2</div>
+          <img src="../public/images/placeholder.png" class="card-img-top" alt="Imagem do jogo 2" />
+          <div class="card-body bg-secondary text-white">
+            <h5>Plataforma: <span>Console</span></h5>
+            <h5>Gênero: <span>Aventura</span></h5>
+            <div>
+              <!-- Rating -->
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <div class="card-footer bg-dark">
+            <div class="dropdown show">
+              <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gerenciar
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Deletar</a></li>
+                <a class="dropdown-item" href="#"><!-- Favoritar --></a>
+                <a class="dropdown-item" href="#"><!-- Visualizar --></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do Card 2 -->
+
+      <!-- Card 3 -->
+      <div class="col-6 col-md-4 col-lg-3 mt-2">
+        <div class="card">
+          <div class="card-header text-white bg-dark">Título do Jogo 3</div>
+          <img src="../public/images/placeholder.png" class="card-img-top" alt="Imagem do jogo 3" />
+          <div class="card-body bg-secondary text-white">
+            <h5>Plataforma: <span>Mobile</span></h5>
+            <h5>Gênero: <span>Estratégia</span></h5>
+            <div>
+              <!-- Rating -->
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <div class="card-footer bg-dark">
+            <div class="dropdown show">
+              <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gerenciar
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Deletar</a></li>
+                <a class="dropdown-item" href="#"><!-- Favoritar --></a>
+                <a class="dropdown-item" href="#"><!-- Visualizar --></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do Card 3 -->
+
+      <!-- Card 1 -->
+      <div class="col-6 col-md-4 col-lg-3 mt-2">
+        <div class="card">
+          <div class="card-header text-white bg-dark">Título do Jogo 1</div>
+          <img src="../public/images/placeholder.png" class="card-img-top" alt="Imagem do jogo 1" />
+          <div class="card-body bg-secondary text-white">
+            <h5>Plataforma: <span>PC</span></h5>
+            <h5>Gênero: <span>Ação</span></h5>
+            <div>
+              <!-- Rating -->
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <div class="card-footer bg-dark">
+            <div class="dropdown show">
+              <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gerenciar
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Deletar</a></li>
+                <a class="dropdown-item" href="#"><!-- Favoritar --></a>
+                <a class="dropdown-item" href="#"><!-- Visualizar --></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do Card 1 -->
+
+      <!-- Card 1 -->
+      <div class="col-6 col-md-4 col-lg-3 mt-2">
+        <div class="card">
+          <div class="card-header text-white bg-dark">Título do Jogo 1</div>
+          <img src="../public/images/placeholder.png" class="card-img-top" alt="Imagem do jogo 1" />
+          <div class="card-body bg-secondary text-white">
+            <h5>Plataforma: <span>PC</span></h5>
+            <h5>Gênero: <span>Ação</span></h5>
+            <div>
+              <!-- Rating -->
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <div class="card-footer bg-dark">
+            <div class="dropdown show">
+              <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gerenciar
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Deletar</a></li>
+                <a class="dropdown-item" href="#"><!-- Favoritar --></a>
+                <a class="dropdown-item" href="#"><!-- Visualizar --></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do Card 1 -->
+
+      <!-- Card 1 -->
+      <div class="col-6 col-md-4 col-lg-3 mt-2">
+        <div class="card">
+          <div class="card-header text-white bg-dark">Título do Jogo 1</div>
+          <img src="../public/images/placeholder.png" class="card-img-top" alt="Imagem do jogo 1" />
+          <div class="card-body bg-secondary text-white">
+            <h5>Plataforma: <span>PC</span></h5>
+            <h5>Gênero: <span>Ação</span></h5>
+            <div>
+              <!-- Rating -->
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <div class="card-footer bg-dark">
+            <div class="dropdown show">
+              <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gerenciar
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Deletar</a></li>
+                <a class="dropdown-item" href="#"><!-- Favoritar --></a>
+                <a class="dropdown-item" href="#"><!-- Visualizar --></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do Card 1 -->
+
+    </div>
+    <hr />
+
+    <!-- Botão para voltar ao início -->
+    <div class="mt-5">
+      <a href="/" class="btn btn-primary">Voltar ao Início</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../public/javascripts/fetchGamesFront.js" defer></script>
+    <script src="../public/javascripts/deleteGameAnimation.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+  </div>
+</body>
+
+</html>
